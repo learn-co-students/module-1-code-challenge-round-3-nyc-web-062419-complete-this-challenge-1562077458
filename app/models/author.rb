@@ -43,7 +43,7 @@ class Author
   end
 
   def self.most_active
-    self.all.sort_by {|author| author.articles.length}.last
+    self.all.max_by {|author| author.articles.length}
   end
 
 end
