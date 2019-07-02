@@ -19,6 +19,8 @@ ryanGosslingArticle = Article.new(yana, people, "Ryan Gossling Hot", "His eyes a
 getFitArticle = Article.new(yos, nhl, "Work out like a Pro", "I will teach you how to train like a pro NHL player")
 famousArticle = Article.new(yana, enews, "Most Famous Actors", "Why are they famous? No one knows")
 
+ben.add_article(nhl, "cool new article", "This article is the greatest of its kind")
+
 ### DO NOT REMOVE THIS
 binding.pry
 

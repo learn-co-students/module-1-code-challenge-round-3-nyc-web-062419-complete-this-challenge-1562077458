@@ -8,8 +8,26 @@ class Author
     Author.all << self
   end
 
-  def add.article(magazine, title, content)
+  def add_article(magazine, title, content)
     Article.new(self, magazine, title, content)
+  end
+
+  def articles
+    Article.all.select { |artti| artti.author == self }
+  end
+
+  def magazines
+    articlesByAuthor = Article.all.select { |artti| artti.author == self }
+    articlesByAuthor.map { |artti| artti.magazine }.uniq
+  end
+
+  def show_specialties
+    articlesByAuthor = Article.all.select { |artti| artti.author == self }
+    articlesByAuthor.map { |artti| artti.magazine.category }.uniq
+  end
+
+  def self.most_active
+    Article.all.max_by { |artti| artti.author }
   end
 
   def self.most_verbose
