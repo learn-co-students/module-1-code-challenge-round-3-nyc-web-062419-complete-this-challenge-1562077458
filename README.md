@@ -4,6 +4,8 @@ For this assignment, you will be creating a domain to track contributions that a
 
 _Note:_ It can be incredibly helpful to draw out what your domain will look like before you start coding. If you are not sketching out your domain, and thinking about single source of truth, you are doing it wrong :(
 
+  Author -< Articles >- Magazine
+
 ## Topics
 
 - Classes vs Instances
