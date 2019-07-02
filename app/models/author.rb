@@ -11,13 +11,15 @@ class Author
     @@all
   end
 
-  # this!!!!!!!
-  def self.most_verbose
-  end
-
   def helper
     Article.all.select {|instance| instance.author == self}
   end
+
+   # this!!!!!!!
+   def self.most_verbose
+    var = Article.all.select {|instance| instance.content}
+    var.map {|n| n.content}.sort.last.author
+   end
 
   def add_article(magazine, title, content)
     var = Article.new(self, magazine, title, content)
@@ -36,8 +38,8 @@ class Author
   end
 
   ##### do this
-  def self.all
-    Article.all.
-  end
+  # def self.all
+  #   Article.all.
+  # end
 
 end

@@ -84,6 +84,7 @@ A magazine is initialized with a name as a string and a category as a string. Th
   + Returns a **unique** array of Magazine instances for which the author has contributed to
 + `Author#show_specialties`
   + Returns a **unique** array of categories of the magazines for which the author has contributed to
+  <!--  -->
 + `Author.most_active`
   + Returns the Author instance who has written the greatest number of articles
 
