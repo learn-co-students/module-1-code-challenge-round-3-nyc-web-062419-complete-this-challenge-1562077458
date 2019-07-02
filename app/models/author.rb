@@ -12,11 +12,14 @@ class Author
     @@all
   end
 
-  def self.most_verbose
+  def self.most_verbose #NOT DONE
     #Returns the Author instance who has the longest article by word count
-    # auth = Article.all.map do |article_instance|
-    #   article_instance.content (***sort by string length***) (***return longest***)
+    sorted = Article.all.map do |article_instance|
+      article_instance.content.sort_by
+    end
 
+    auth = sorted[-1].author
+    auth
   end
 
   def add_article(magazine, title, content)
@@ -54,7 +57,10 @@ class Author
     magazine_categories.uniq
   end
 
-  def self.most_active
+  def self.most_active ##NOT DONE!
     #Returns the Author instance who has written the greatest number of articles
+    Article.all.map do |article_instance|
+      article_instance
+    end
   end
 end
