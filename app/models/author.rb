@@ -13,13 +13,13 @@ class Author
     end
   end
 
-  def self.most_verbose
-    Article.all.select do |article_int|
-      if article_int.author == self
-        return article_int.content.size
-      end
-    end
-  end
+  # def self.most_verbose
+  #   Article.all.collect do |article_int|
+  #     if article_int.author == self
+  #       return article_int.content.size
+  #     end
+  #   end
+  # end
  #// Trying to use #articles as a helper to iterate through Articles to find the one that is most verbose, having an issue^^
 ## returning an empty array for me
 
@@ -38,6 +38,13 @@ class Author
       article_int.magazine
     end
   end
+
+  def show_specialties
+    self.magazines.select do |magazine_int|
+      magazine_int.name == self
+    end.uniq
+  end
+
 
   def self.all
     @@all
