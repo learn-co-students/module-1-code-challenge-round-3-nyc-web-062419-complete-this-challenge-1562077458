@@ -20,10 +20,10 @@ magazine3 = Magazine.new("Mag3", "Animals")
 magazine4 = Magazine.new("Mag4", "Nature")
 magazine5 = Magazine.new("Mag5", "Nature")
 
-article1 = Article.new(author1, magazine1, "Title1", "Sports")
-article2 = Article.new(author2, magazine2, "Title2", "Nature")
-article3 = Article.new(author3, magazine3, "Title3", "Animals")
-article4 = Article.new(author1, magazine4, "Title4", "Sports")
+article1 = Article.new(author1, magazine1, "Title1", "Blah blah blah i went on a walk today oh man")
+article2 = Article.new(author2, magazine2, "Title2", "Wow this is hard")
+article3 = Article.new(author3, magazine3, "Title3", "I am running out of ideas")
+article4 = Article.new(author1, magazine4, "Title4", "This is content?")
 
 
 ### DO NOT REMOVE THIS

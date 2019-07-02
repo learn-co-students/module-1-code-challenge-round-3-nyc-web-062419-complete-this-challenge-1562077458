@@ -26,6 +26,18 @@ class Magazine
     end
   end
 
+  def contributors
+    self.articles.collect do |article_instance|
+      article_instance
+    end
+  end
+
+  def word_count
+    self.articles.collect do |article_instance|
+      article_instance.content.scan(/\w+/).size
+    end
+  end
+
   def self.all
     @@all
   end
