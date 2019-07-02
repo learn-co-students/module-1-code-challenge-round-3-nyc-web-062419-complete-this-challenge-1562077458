@@ -4,7 +4,6 @@ class Author
 
   attr_reader :name
 
-
   def initialize(name)
     @name = name
     Author.all << self
@@ -14,13 +13,8 @@ class Author
     @@all
   end
 
-  # def longest_article
-  #   my_articles = Article.all.select {|article| article.author == self}
-  #   my_article_arrays = my_articles.collect {|article| article.content.split(' ')}
-  # end
-
   def self.most_verbose
-    self.all.sort_by {|author| author.longest_article.length}.last
+    self.all.max_by {|author| author.longest_article.length}
   end
 
   def add_article(magazine, title, content)
@@ -33,12 +27,11 @@ class Author
 
   def article_contents
     contents = self.articles.collect {|article| article.content}
-    content_arrays = contents.collect {|article_content| article_content.split(" ")}
-    content_arrays.sort_by {|array| array.length}
+    contents.collect {|article_content| article_content.split(" ")}
   end
 
   def longest_article
-    self.article_contents.last
+    self.article_contents.max_by {|array| array.length}
   end
 
   def magazines
