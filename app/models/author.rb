@@ -33,6 +33,12 @@ class Author
     end
   end
 
+  def magazines
+    self.articles.collect do |article_int|
+      article_int.magazine
+    end
+  end
+
   def self.all
     @@all
   end
