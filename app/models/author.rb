@@ -9,7 +9,10 @@ class Author
     def self.all
         @@all
     end
-
+    def self.most_verbose
+    longest =  Article.all.sort_by {|a| a.content.length}.last
+    longest.author
+    end
 
 end
 
@@ -18,7 +21,6 @@ end
 
 #
 # 
-#   + Returns an array of all Author instances
 # + `Author.most_verbose`
 #   + Returns the Author instance who has the longest article by word count
 

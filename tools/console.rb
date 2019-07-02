@@ -15,6 +15,14 @@ magazine3 = Magazine.new("Cooking Time","food")
 magazine4 = Magazine.new("Coding Time","software")
 
 
+article1 = Article.new(author1,magazine1,"hello","blah blah")
+article2 = Article.new(author2,magazine2,"hi","blah blah blah")
+article3 = Article.new(author3,magazine4,"nope","blah blah blah blah blah")
+article4 = Article.new(author1,magazine2,"hello","blah blah")
+article5 = Article.new(author3,magazine3,"hello","blah blah")
+article6 = Article.new(author1,magazine1,"hello","blah ")
+article7 = Article.new(author4,magazine1,"hello","bla")
+
 ###  WRITE YOUR TEST CODE HERE ###
 
 
