@@ -12,11 +12,13 @@ class Author
   end
 
   def self.most_verbose
+    #max by author word count
     Author.all.max_by do |author|
-      Article.all.select do |article|
-        article == author
-        end.map do |articles|
-        articles.content.count
+      #gets all articles written by author
+      author.articles.map do |article|
+        article.content
+      end.max_by do |content|
+        content.size
       end
       end
   end
