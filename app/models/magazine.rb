@@ -26,7 +26,7 @@ class Magazine
     self.articles.collect {|article| article.title}
   end
 
-  def contibutors
+  def contributors
     self.articles.collect {|article| article.author}.uniq
   end
 

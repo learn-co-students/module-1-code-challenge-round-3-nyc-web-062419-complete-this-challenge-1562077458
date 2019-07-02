@@ -24,7 +24,7 @@ class Author
   end
 
   def add_article(magazine, title, content)
-    Article.new (self, magazine, title, content)
+    Article.new(self, magazine, title, content)
   end
 
   def articles
@@ -33,7 +33,7 @@ class Author
 
   def article_contents
     contents = self.articles.collect {|article| article.content}
-    content_arrays = content.collect {|article_content| article_content.split(" ")}
+    content_arrays = contents.collect {|article_content| article_content.split(" ")}
     content_arrays.sort_by {|array| array.length}
   end
 
@@ -47,7 +47,6 @@ class Author
 
   def show_specialties
     self.magazines.collect {|magazine| magazine.category}.uniq
-    }
   end
 
   def self.most_active
