@@ -20,6 +20,7 @@ class Author
   # end
 
   def self.most_verbose
+    self.all.sort_by {|author| author.longest_article.length}.last
   end
 
   def add_article(magazine, title, content)
@@ -27,7 +28,17 @@ class Author
   end
 
   def articles
-    my_articles = Article.all.select {|article| article.author == self}
+    Article.all.select {|article| article.author == self}
+  end
+
+  def article_contents
+    contents = self.articles.collect {|article| article.content}
+    content_arrays = content.collect {|article_content| article_content.split(" ")}
+    content_arrays.sort_by {|array| array.length}
+  end
+
+  def longest_article
+    self.article_contents.last
   end
 
   def magazines
