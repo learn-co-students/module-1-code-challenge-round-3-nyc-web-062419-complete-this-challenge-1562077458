@@ -19,7 +19,7 @@ class Magazine
   # + `Magazine.find_by_name(name)`
   #   + Given a string of magazine's name, this method returns the first magazine object that matches
   def self.find_by_name(name)
-    Magazine.all.find {|mag| mag == self}
+    Magazine.all.find {|mag| mag.name == name}
   end
   
   
