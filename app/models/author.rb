@@ -1,11 +1,53 @@
 class Author
-  attr_accessor :name
-
+  attr_reader :name
+  @@all = []
 
   def initialize(name)
     @name = name
-  
+    Author.all << self
   end
 
+  def articles
+    Article.all.select do |article_int|
+      article_int.author == self
+    end
+  end
+
+  # def self.most_verbose
+  #   Article.all.collect do |article_int|
+  #     if article_int.author == self
+  #       return article_int.content.size
+  #     end
+  #   end
+  # end
+ #// Trying to use #articles as a helper to iterate through Articles to find the one that is most verbose, having an issue^^
+## returning an empty array for me
+
+  def add_article(magazine, title, content)
+    Article.new(self, magazine, title, content)
+  end
+
+  def articles
+    Article.all.select do |article_int|
+      article_int.author  == self
+    end
+  end
+
+  def magazines
+    self.articles.collect do |article_int|
+      article_int.magazine
+    end
+  end
+
+  def show_specialties
+    self.magazines.select do |magazine_int|
+      magazine_int.name == self
+    end.uniq
+  end
+
+
+  def self.all
+    @@all
+  end
 
 end
