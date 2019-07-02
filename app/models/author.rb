@@ -27,6 +27,12 @@ class Author
     Article.new(self, magazine, title, content)
   end
 
+  def articles
+    Article.all.select do |article_int|
+      article_int.author  == self
+    end
+  end
+
   def self.all
     @@all
   end
