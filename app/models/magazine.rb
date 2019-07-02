@@ -8,9 +8,21 @@ class Magazine
     Magazine.all << self
   end
 
+  def articles 
+    Article.all.select do |article_instance|
+      article_instance.magazine == self
+    end
+  end
+
   def self.find_by_name(this_name)
     Magazine.all.select do |mag_instance|
       mag_instance.name == this_name
+    end
+  end
+
+  def article_titles
+    self.articles.collect do |article_instance|
+      article_instance.title
     end
   end
 
