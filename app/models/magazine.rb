@@ -19,16 +19,36 @@ class Magazine
     end
   end
 
+  # `Magazine#article_titles`
+#   + Returns an array of the titles of all articles written for that magazine
+    def article_titles
+      Article.all.select do |instance|
+        instance.magazine == instance
+      end
+    end
+
+    # + `Magazine#contributors`
+    # #   + Returns an array of Author instances who have written for this magazine
+    def contributors
+      Article.all.select do |instance|
+        instance.author 
+
+    end
+
+#     `Magazine#word_count`
+# #   + Returns a number that is the total number of words for all of the articles in this magazine
+    def word_count
+    end
 
 end
 
-# A magazine is initialized with a name as a string and a category as a string. The name of the magazine and the category of the magazine **can be** changed after being initialized.
 
-#X + `Magazine#name`
-#X   + Returns the name of this magazine
-#X + `Magazine#category`
-#X   + Returns the category of this magazine
-#X + `Magazine.all`
-#X   + Returns an array of all Magazine instances
-# X+ `Magazine.find_by_name(name)`
-#   + Given a string of magazine's name, this method returns the first magazine object that matches
+
+
+# 
+# +
+
+
+
+
+
