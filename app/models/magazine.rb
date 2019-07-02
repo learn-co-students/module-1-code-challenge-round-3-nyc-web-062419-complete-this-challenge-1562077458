@@ -11,6 +11,10 @@ class Magazine
     @@all
   end
 
+  def self.find_by_name name
+    Magazine.all.find {|m| m.name == name}
+  end
+
 
 end
 
