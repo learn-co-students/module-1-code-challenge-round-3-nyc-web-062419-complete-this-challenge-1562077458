@@ -1,6 +1,6 @@
 class Article
-    attr_accessor :author, :magazine
-    attr_reader :title, :content
+    attr_accessor :author, :magazine, :content
+    attr_reader :title
     @@all = []
 
 
