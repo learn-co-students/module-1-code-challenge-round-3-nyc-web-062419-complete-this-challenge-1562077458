@@ -31,8 +31,8 @@ class Magazine
     # #   + Returns an array of Author instances who have written for this magazine
     def contributors
       Article.all.select do |instance|
-        instance.author 
-
+        instance.author == instance
+      end
     end
 
 #     `Magazine#word_count`
