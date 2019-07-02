@@ -5,7 +5,7 @@ class Magazine
   def initialize(name, category)
     @name = name
     @category = category
-
+    Magazine.all << self
   end
   def self.all 
     @@all
@@ -13,3 +13,10 @@ class Magazine
 
 
 end
+
+
+# 
+# + 
+# +
+# + `Magazine.find_by_name(name)`
+#   + Given a string of magazine's name, this method returns the first magazine object that matches
