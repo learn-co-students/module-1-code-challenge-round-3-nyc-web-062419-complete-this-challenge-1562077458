@@ -14,13 +14,20 @@ class Magazine
   def self.find_by_name name
     Magazine.all.find {|m| m.name == name}
   end
+  def article_titles
+    Article.all.select {|a| a.magazine == self}
+    .map {|a| a.title}
+  end
+  def contributors
+    Article.all.select {|a| a.magazine == self}
+    .map {|a| a.author}.uniq
+  end
 
+  def word_count
+    Article.all.select {|a| a.magazine == self}
+    .map {|a| a.content.split}.flatten.length
+  end
 
 end
 
 
-# 
-# + 
-# +
-# + `Magazine.find_by_name(name)`
-#   + Given a string of magazine's name, this method returns the first magazine object that matches
