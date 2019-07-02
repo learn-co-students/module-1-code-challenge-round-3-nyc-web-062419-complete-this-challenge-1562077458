@@ -11,6 +11,12 @@ class Article
         Article.all << self
     end
 
+    # def authors ()
+
+
+    # def author
+    #      self.
+    # end
 
     def self.all
         @@all

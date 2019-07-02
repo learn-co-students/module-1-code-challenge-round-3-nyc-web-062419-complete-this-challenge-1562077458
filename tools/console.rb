@@ -7,10 +7,6 @@ end
 
 ###  WRITE YOUR TEST CODE HERE ###
 
-article1 = Article.new(author1, magazine1, "Title1", "Sports")
-article2 = Article.new(author2, magazine2, "Title2", "Nature")
-article3 = Article.new(author3, magazine3, "Title3", "Animals")
-article4 = Article.new(author1, magazine4, "Title4", "Sports")
 
 author1 = Author.new("Kyle")
 author2 = Author.new("Steve")
@@ -24,6 +20,10 @@ magazine3 = Magazine.new("Mag3", "Animals")
 magazine4 = Magazine.new("Mag4", "Nature")
 magazine5 = Magazine.new("Mag5", "Nature")
 
+article1 = Article.new(author1, magazine1, "Title1", "Sports")
+article2 = Article.new(author2, magazine2, "Title2", "Nature")
+article3 = Article.new(author3, magazine3, "Title3", "Animals")
+article4 = Article.new(author1, magazine4, "Title4", "Sports")
 
 
 ### DO NOT REMOVE THIS
