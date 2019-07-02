@@ -18,7 +18,7 @@ class Author
    # this!!!!!!!
    def self.most_verbose
     var = Article.all.select {|instance| instance.content}
-    var.map {|n| n.content}.sort.last.author
+    var.map {|n| n.content}.sort.last
    end
 
   def add_article(magazine, title, content)
@@ -37,9 +37,9 @@ class Author
     helper.map {|art| art.magazine}.map{|magazine_instance| magazine_instance.category}.uniq
   end
 
-  ##### do this
-  # def self.all
-  #   Article.all.
-  # end
+  #### do this
+  def self.most_active
+    Article.all.select {|instance| instance.author}.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+  end
 
 end
