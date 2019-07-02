@@ -23,6 +23,9 @@ article5 = Article.new(author3,magazine3,"hello","blah blah")
 article6 = Article.new(author1,magazine1,"hello","blah ")
 article7 = Article.new(author4,magazine1,"hello","bla")
 
+
+author1.add_article(magazine1,"Boom","oh no oh god")
+
 ###  WRITE YOUR TEST CODE HERE ###
 
 
