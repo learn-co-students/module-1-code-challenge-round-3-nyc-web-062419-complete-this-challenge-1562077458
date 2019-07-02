@@ -9,6 +9,7 @@ class Article
     @magazine = magazine
     @title = title
     @content = content
+    author.articles << self
     Article.all << self
   end
 

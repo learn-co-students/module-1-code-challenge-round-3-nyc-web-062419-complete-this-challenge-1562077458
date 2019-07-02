@@ -1,10 +1,12 @@
 class Author
   attr_reader :name
+  attr_accessor :articles
 
   @@all = []
 
   def initialize(name)
     @name = name
+    @articles = []
     Author.all << self
   end
 
@@ -27,7 +29,7 @@ class Author
   end
 
   def self.most_active
-    Article.all.max_by { |artti| artti.author }
+    Author.all.max_by { |auth| auth.articles.length }
   end
 
   def self.most_verbose
